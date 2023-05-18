@@ -20,7 +20,6 @@ Metrics/CyclomaticComplexity:
 Metrics/PerceivedComplexity:
   Enabled: false
 Metrics/BlockLength:
-  IgnoredMethods: ['describe']
   Max: 100
 
 
