@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
     @user = User.create(name: 'Mike Jones', photo: 'https://unsplash.com/photos/RGKJOUFH0',
                         bio: 'Love ME, maybe!')
   end
-  describe 'validations' do
+  describe 'All Validations' do
     it 'should validate the presence of name' do
       @user.name = nil
       expect(@user.errors.any?).to eq(true)
@@ -22,7 +22,7 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe 'associations' do
+  describe 'All Associations' do
     it 'should have many posts' do
       expect(@user.posts).to eq([])
     end
