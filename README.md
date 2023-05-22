@@ -62,6 +62,7 @@
 - **This Project Creates a data model.**
 - **This Project Validates and Model specs.**
 - **This Project Processes data in models.**
+- **This Project Setup controllers and routers.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -141,7 +142,6 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Setup and controllers.**
 - **Controllers specs.**
 - **Views.**
 - **Forms.**
