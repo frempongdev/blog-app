@@ -63,6 +63,7 @@
 - **This Project Validates and Model specs.**
 - **This Project Processes data in models.**
 - **This Project Setup controllers and routers.**
+- **This Project Setup controllers specs..**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,7 +143,6 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Controllers specs.**
 - **Views.**
 - **Forms.**
 - **Integration specs for Views and fixing n+1 problems.**
