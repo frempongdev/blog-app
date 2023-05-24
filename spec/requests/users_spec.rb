@@ -31,4 +31,9 @@ RSpec.describe 'GET /users/:id', type: :request do
     get user_path(user.id)
     expect(response).to render_template(:show)
   end
+
+  it 'displays show content for a user' do
+    get user_path(user.id)
+    expect(response.body).to include('list of posts for a given user')
+  end
 end
