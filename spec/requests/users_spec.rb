@@ -7,12 +7,12 @@ RSpec.describe "GET /users", type: :request do
       expect(response.status).not_to eq(404)
     end
 
-    it "renders the index template" do
+    it "renders the index template for users controller" do
       get users_path
       expect(response).to render_template(:index)
     end
 
-    it "displays index content" do
+    it "displays index content for users controller" do
       get users_path
       expect(response.body).to include("all Users")
     end
@@ -27,7 +27,7 @@ RSpec.describe "GET /users", type: :request do
       expect(response.status).not_to eq(404)
     end
 
-    it "renders the show template" do
+    it "renders the show template for users controller" do
       get user_path(user.id)
       expect(response).to render_template(:show)
     end
