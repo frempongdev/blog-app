@@ -1,23 +1,39 @@
 .user-block {
     display: flex;
+    margin-bottom: 1%;
 }
 
 .photo-box {
     border: solid rgb(56, 56, 56);
-    width: 100px;
-    height: 100px;
+    width: 10%;
+    height: auto;
     margin-right: 2%;
 }
 
 .details-box {
+    display: flex;
+    flex-direction: column;  
     border: solid rgb(56, 56, 56);
     width: 60%;
     height: 100px;
-    padding: 1%;
-    display: flex;
-    flex-direction: column;  
+    padding: 0.5%;
 }
 
 .details-box span {
     align-self: flex-end;
+}
+
+.bio-box {
+    margin-bottom: 1%;
+}
+
+.posts-box {
+    border: solid rgb(56, 56, 56);
+    margin-bottom: 1%;
+}
+
+.posts-btn {
+    border: black solid 1px;
+    padding: 0.2%;
+    text-decoration: none;
 }
