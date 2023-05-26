@@ -2,6 +2,7 @@
 
 <% post = Post.find(params[:id]) %>
 <% user = User.find(params[:user_id]) %>
+
 <div class="post-box">
     <div class="top">
         <div class="post-details">
@@ -11,10 +12,12 @@
             <span>Comments: <%= post.comments_counter %>, Likes: <%= post.like_counter %></span>
         </div>
     </div>
+    
     <div class="main">
         <p><%= post.text %></p>
     </div>
 </div>
+
 <div class="comments-box">
     <% if Comment.where(post_id: post).empty? %>
                 <%= "No comments yet!"%>
