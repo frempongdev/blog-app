@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  def index 
+  def index
     @user = User.find(params[:user_id])
     @posts = @user.posts
   end
@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   def new
     @post = @current_user.posts.new
   end
-  
+
   def create
     @user = User.find(params[:user_id])
     @post = @user.posts.new(post_params)
@@ -34,6 +34,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :text)
   end
-
-    
 end
