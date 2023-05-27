@@ -1,18 +1,17 @@
 <%= stylesheet_link_tag 'user_show' %>
 
-<% user = User.find(params[:id])%>
-<%= render "shared/userblock", user: user %>
+<%= render "shared/userblock", user:@user %>
 
 <div class="bio-box">
   <span>Bio</span>
-  <p><%= user.bio %></p>
+  <p><%= @user.bio %></p>
 </div>
 
 <div class="posts-box">
-  <% if user.last_three_posts.empty? %>
-    <%= "#{user.name} has no post yet!" %>
+  <% if @user.last_three_posts.empty? %>
+    <%= "#{@user.name} has no post yet!" %>
   <%else%>
-    <% user.last_three_posts.each_with_index do |post, index| %>
+    <% @user.last_three_posts.each_with_index do |post, index| %>
         <div class="post-box">
             <span>Post #<%= index + 1 %></span>
             <p><%= post.text %></p>
