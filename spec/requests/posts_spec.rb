@@ -17,7 +17,7 @@ RSpec.describe 'GET posts/', type: :request do
 
   it 'displays index content for posts controller' do
     get user_posts_path(user.id)
-    expect(response.body).to include('all posts by User')
+    expect(response.body).to include('Number of posts')
   end
 end
 
@@ -38,6 +38,6 @@ RSpec.describe 'GET /user/:id/posts/', type: :request do
 
   it 'displays show content for user post' do
     get user_post_path(user.id, post.id)
-    expect(response.body).to include('the nth post of the User')
+    expect(response.body).to include('Comments:')
   end
 end
