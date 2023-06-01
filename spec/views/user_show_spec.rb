@@ -24,3 +24,16 @@ RSpec.describe 'Renders users Show Page', type: :feature do
     expect(page).to have_content(@user.last_three_posts[2].text)
     expect(page).to have_no_content(Post.where(author: @user))
   end
+  scenario 'View all posts button redirects to user posts index page' do
+    visit user_path(@user)
+    # Test: Clicking "See all posts" button redirects to the user's posts index page
+    click_link 'See all posts'
+    expect(page).to have_current_path(user_posts_path(@user))
+  end
+  scenario 'Clicking on a user post redirects to post show page' do
+    visit user_path(@user)
+    # Test: Clicking on a user's post redirects to the post's show page
+    click_link('See all posts')
+    expect(page).to have_current_path(user_posts_path(@user))
+  end
+end
