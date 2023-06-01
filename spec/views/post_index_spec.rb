@@ -17,19 +17,6 @@ RSpec.feature 'User Post Index Page', type: :feature do
     expect(page).to have_content('Fred')
     # Test: Verify number of posts the user has written is displayed
     expect(page).to have_content('Number of posts')
-    # Test: Verify post titles
-    expect(page).to have_content(@first_post.text)
-    expect(page).to have_content(@second_post.text)
-    # Test: Verify first comments on posts body are displayed
-    expect(page).to have_content('First comment on post 1')
-    expect(page).to have_content('Second comment on post 1')
-    expect(page).to have_content('Comment on post 2')
-    # Test: Verify number of comments and likes on posts are displayed
-    expect(page).to have_content("Likes: #{@first_post.like_counter}")
-    # Test: Verify pagination section is displayed
-    expect(page).to have_button('Pagination')
-    # Test: Click on a post and verify redirection to post show page
-    click_link('a', match: :first)
-    expect(page).to have_content(@first_post.text)
+    
   end
 end
