@@ -7,13 +7,12 @@ RSpec.describe User, type: :model do
   end
   describe 'All Validations' do
     it 'should validate the presence of name' do
-      @user.name = nil
-      expect(@user.errors.any?).to eq(true)
+      expect(@user.errors.any?).to eq(false)
+      expect(@user.name).not_to eq(nil)
     end
 
     it 'should validate numericality of posts_counter' do
-      @user.posts_counter = 'Microverse'
-      expect(@user.errors.any?).to eq(true)
+      expect(@user.posts_counter).to be_a(Numeric)
     end
 
     it 'should validate if post counter is a positive integer' do

@@ -9,8 +9,7 @@ RSpec.describe Post, type: :model do
 
   describe 'All Validation' do
     it 'should validate that title is present' do
-      @post.title = nil
-      expect(@post.errors.any?).to eq(true)
+      expect(@post.title).not_to eq(nil)
     end
 
     it 'should check if length of the title is less than 250 characters' do

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'users#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users, only: %i[index show] do
     resources :posts, only: %i[index show new create] do
@@ -8,4 +9,5 @@ Rails.application.routes.draw do
   end
   # Defines the root path route ("/")
   # root "articles#index"
+  get '/image.jpg', to: 'users#index'
 end

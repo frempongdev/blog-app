@@ -14,7 +14,7 @@ RSpec.describe 'GET /users', type: :request do
 
   it 'displays index content for users controller' do
     get users_path
-    expect(response.body).to include('all Users')
+    expect(response.body).to include('Number of posts')
   end
 end
 
@@ -34,6 +34,6 @@ RSpec.describe 'GET /users/:id', type: :request do
 
   it 'displays show content for a user' do
     get user_path(user.id)
-    expect(response.body).to include('list of posts for a given user')
+    expect(response.body).to include('Number of posts')
   end
 end
