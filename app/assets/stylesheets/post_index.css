@@ -14,3 +14,8 @@
     margin-bottom: 4%;
     padding: 0.2%;
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
