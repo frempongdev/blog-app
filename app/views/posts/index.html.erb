@@ -3,7 +3,7 @@
 <%= render "shared/userblock", user: @user %>
 
 <div class="all-posts">
-<% Post.where(author: @user.id).each_with_index do |post, index|%>
+<% Post.includes(:author, :comments).where(author: @user.id).each_with_index do |post, index|%>
     <%= link_to user_post_path(user_id: @user.id, id: post.id), class:"see-post" do %>
         <div class="post-box" >
             <div>
@@ -19,10 +19,10 @@
     <%end%>
 
     <div class="comment-box">
-        <% if Comment.where(post_id: post).empty? %>
+        <% if post.comments.empty? %>
             <%= "No comments yet!"%>
          <%else%>
-            <% Comment.where(post_id: post).each do |comment| %>
+            <% post.comments.each do |comment| %>
                 <div>
                 <span><%= "#{comment.author.name}: "%></span>
                 <span><%= comment.text %></span>

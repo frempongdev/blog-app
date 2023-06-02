@@ -16,7 +16,7 @@ RSpec.describe 'Renders the post show page', type: :feature do
   scenario 'displays the post title' do
     expect(page).to have_content(@first_post.title)
   end
-  
+
   scenario 'displays who wrote the post' do
     expect(page).to have_content(@user.name)
   end

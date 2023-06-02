@@ -6,7 +6,7 @@ RSpec.configure do |config|
     # Configure desired options
     options.add_argument('--headless') # Example: Run in headless mode
 
-    @driver = Selenium::WebDriver.for :chrome, options: options
+    @driver = Selenium::WebDriver.for :chrome, options:
   end
 
   config.after(:each) do

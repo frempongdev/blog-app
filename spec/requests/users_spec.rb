@@ -34,6 +34,6 @@ RSpec.describe 'GET /users/:id', type: :request do
 
   it 'displays show content for a user' do
     get user_path(user.id)
-    expect(response.body).to include("Number of posts")
+    expect(response.body).to include('Number of posts')
   end
 end
