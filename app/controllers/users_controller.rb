@@ -4,6 +4,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    if params[:id] == 'sign_out'
+      sign_out_and_redirect
+    else
+      @user = User.find(params[:id])
+    end
   end
 end
