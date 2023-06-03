@@ -2,7 +2,7 @@ class LikesController < ApplicationController
   def new
     @user = User.find(params[:user_id])
   end
-  
+
   def create
     @user = current_user
     @post = Post.find(params[:post_id])
