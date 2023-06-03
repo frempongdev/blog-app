@@ -1,5 +1,11 @@
 <%= stylesheet_link_tag 'user_index' %>
 
+<div class="sign_out_button">
+<button>
+  <%= link_to 'Sign out',  destroy_user_session_path, method: :delete %>
+</button>
+</div>
+
 <% User.all.each do |user|%>
   <%= link_to user_path(user), class: "userlink" do %>
     <%= render "shared/userblock", user: user %>

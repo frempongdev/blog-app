@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  devise_for :users
+  root 'users#index', as: :authenticated_root
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users, only: %i[index show] do
     resources :posts, only: %i[index show new create] do
